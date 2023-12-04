@@ -19,87 +19,40 @@
 
 package org.ehrbase.aqleditor.service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Pair;
-import org.ehrbase.aql.binder.AqlBinder;
-import org.ehrbase.aql.dto.AqlDto;
-import org.ehrbase.aql.dto.condition.ConditionComparisonOperatorDto;
-import org.ehrbase.aql.dto.condition.ConditionDto;
-import org.ehrbase.aql.dto.condition.ConditionLogicalOperatorDto;
-import org.ehrbase.aql.dto.condition.ParameterValue;
-import org.ehrbase.aql.parser.AqlParseException;
-import org.ehrbase.aql.parser.AqlToDtoParser;
 import org.ehrbase.aqleditor.dto.aql.QueryValidationResponse;
 import org.ehrbase.aqleditor.dto.aql.Result;
-import org.ehrbase.client.aql.query.EntityQuery;
-import org.ehrbase.client.aql.record.Record;
+import org.ehrbase.openehr.sdk.aql.dto.AqlQuery;
+import org.ehrbase.openehr.sdk.aql.parser.AqlParseException;
+import org.ehrbase.openehr.sdk.aql.parser.AqlQueryParser;
+import org.ehrbase.openehr.sdk.aql.render.AqlRenderer;
 import org.springframework.stereotype.Service;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 @AllArgsConstructor
 public class AqlEditorAqlService {
 
-  private static final AqlBinder aqlBinder = new AqlBinder();
-
-  public Result buildAql(AqlDto aqlDto) {
-
-    Pair<EntityQuery<Record>, List<ParameterValue>> pair = aqlBinder.bind(aqlDto);
-
-    return new Result(
-        pair.getLeft().buildAql(),
-        pair.getRight().stream()
-            .collect(Collectors.toMap(ParameterValue::getName, ParameterValue::getType)));
+  public Result buildAql(AqlQuery aqlDto) {
+    return new Result(AqlRenderer.render(aqlDto), null);
   }
 
-  public AqlDto parseAql(Result result) {
-    AqlDto aqlDto = new AqlToDtoParser().parse(result.getQ());
-    if (result.getQueryParameters() != null) {
-      List<ParameterValue> parameterValues = extractParameterValues(aqlDto.getWhere());
-      parameterValues.forEach(
-          p -> {
-            if (result.getQueryParameters().containsKey(p.getName())) {
-              p.setType(result.getQueryParameters().get(p.getName()));
-            }
-          });
-    }
-    return aqlDto;
+  public AqlQuery parseAql(Result result) {
+    return AqlQueryParser.parse(result.getQ());
   }
 
   public QueryValidationResponse validateAql(Result query) {
     try {
-      new AqlToDtoParser().parse(query.getQ());
+      AqlQueryParser.parse(query.getQ());
     } catch (AqlParseException e) {
       return buildResponse(e.getMessage());
     }
 
     return QueryValidationResponse.builder().valid(true).message("Query is valid").build();
   }
-
-  private List<ParameterValue> extractParameterValues(ConditionDto conditionDto) {
-    List<ParameterValue> values = new ArrayList<>();
-
-    if (conditionDto instanceof ConditionComparisonOperatorDto) {
-      if (((ConditionComparisonOperatorDto) conditionDto).getValue() instanceof ParameterValue) {
-        values.add((ParameterValue) ((ConditionComparisonOperatorDto) conditionDto).getValue());
-      }
-    } else if (conditionDto instanceof ConditionLogicalOperatorDto) {
-      values.addAll(
-          ((ConditionLogicalOperatorDto) conditionDto)
-              .getValues().stream()
-              .map(this::extractParameterValues)
-              .flatMap(List::stream)
-              .collect(Collectors.toList()));
-    }
-
-    return values;
-  }
-
   public QueryValidationResponse buildResponse(String errorMessage) {
     if (StringUtils.isEmpty(errorMessage)) {
       return QueryValidationResponse.builder().valid(false).build();

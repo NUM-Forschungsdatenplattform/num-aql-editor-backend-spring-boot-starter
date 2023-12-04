@@ -22,7 +22,7 @@
 
   <groupId>org.ehrbase.openehr</groupId>
   <artifactId>aql-editor-backend-spring-boot-starter</artifactId>
-  <version>0.3.0</version>
+  <version>0.6.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <repositories>
@@ -33,18 +33,19 @@
   </repositories>
 
   <properties>
-    <maven.compiler.release>11</maven.compiler.release>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <ehrbase.sdk.version>1.18.0</ehrbase.sdk.version>
-    <commons.lang3.version>3.8</commons.lang3.version>
+    <maven.compiler.release>17</maven.compiler.release>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <ehrbase.sdk.version>2.1.0</ehrbase.sdk.version>
+    <commons.lang3.version>3.14.0</commons.lang3.version>
+    <lombok.version>1.18.26</lombok.version>
   </properties>
 
   <!-- Spring Boot starter parent is taking over most parts of the dependency management -->
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.3.1.RELEASE</version>
+    <version>3.1.3</version>
     <relativePath/>
     <!-- lookup parent from repository -->
   </parent>
@@ -55,17 +56,22 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.github.ehrbase.openEHR_SDK</groupId>
+      <groupId>org.ehrbase.openehr.sdk</groupId>
       <artifactId>client</artifactId>
       <version>${ehrbase.sdk.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.github.ehrbase.openEHR_SDK</groupId>
+      <groupId>org.ehrbase.openehr.sdk</groupId>
+      <artifactId>generator</artifactId>
+      <version>${ehrbase.sdk.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.ehrbase.openehr.sdk</groupId>
       <artifactId>aql</artifactId>
       <version>${ehrbase.sdk.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.github.ehrbase.openEHR_SDK</groupId>
+      <groupId>org.ehrbase.openehr.sdk</groupId>
       <artifactId>test-data</artifactId>
       <version>${ehrbase.sdk.version}</version>
     </dependency>
@@ -78,6 +84,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>

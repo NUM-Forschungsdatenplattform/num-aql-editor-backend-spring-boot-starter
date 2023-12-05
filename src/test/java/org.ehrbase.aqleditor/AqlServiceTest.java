@@ -52,9 +52,9 @@ public class AqlServiceTest {
     assertThat(response.getStartColumn(), is("23"));
     assertThat(response.getStartLine(), is("1"));
     assertThat(response.getMessage(),
-        containsStringIgnoringCase("Parse exception: line 1: char 23 mismatched input 'where' expecting {DISTINCT, FUNCTION_IDENTIFIER, EXTENSION_IDENTIFIER, IDENTIFIER, INTEGER, STRING}"));
+            containsStringIgnoringCase("Parse exception: line 1: char 23 mismatched input 'where' expecting {DISTINCT, NULL, UNKNOWN, TRUE, FALSE, FUNCTION_IDENTIFIER, CAST_FUNCTION_IDENTIFIER, EXTENSION_IDENTIFIER, BOOLEAN, IDENTIFIER, INTEGER, FLOAT, REAL, DATE, PARAMETER, STRING}"));
     assertThat(response.getError(),
-        containsStringIgnoringCase("mismatched input 'where' expecting {DISTINCT, FUNCTION_IDENTIFIER, EXTENSION_IDENTIFIER, IDENTIFIER, INTEGER, STRING}"));
+            containsStringIgnoringCase("mismatched input 'where' expecting {DISTINCT, NULL, UNKNOWN, TRUE, FALSE, FUNCTION_IDENTIFIER, CAST_FUNCTION_IDENTIFIER, EXTENSION_IDENTIFIER, BOOLEAN, IDENTIFIER, INTEGER, FLOAT, REAL, DATE, PARAMETER, STRING}"));
   }
 
   @Test

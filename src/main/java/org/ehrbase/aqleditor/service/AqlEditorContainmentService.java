@@ -31,6 +31,7 @@ import java.util.Iterator;
 import java.util.Map;
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
+import org.ehrbase.aql.dto.path.AqlPath;
 import org.ehrbase.aqleditor.dto.containment.ContainmentDto;
 import org.ehrbase.aqleditor.dto.containment.FieldDto;
 import org.ehrbase.client.classgenerator.config.RmClassGeneratorConfig;
@@ -38,7 +39,6 @@ import org.ehrbase.serialisation.util.SnakeCase;
 import org.ehrbase.util.reflection.ReflectionHelper;
 import org.ehrbase.webtemplate.model.WebTemplate;
 import org.ehrbase.webtemplate.model.WebTemplateNode;
-import org.ehrbase.webtemplate.parser.AqlPath;
 import org.springframework.stereotype.Service;
 
 @Service

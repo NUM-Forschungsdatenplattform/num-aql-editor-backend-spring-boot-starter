@@ -22,7 +22,7 @@
 
   <groupId>org.ehrbase.openehr</groupId>
   <artifactId>num-aql-editor-backend-spring-boot-starter</artifactId>
-  <version>1.0.1-rc-4</version>
+  <version>1.0.1-rc-5</version>
   <packaging>jar</packaging>
 
   <repositories>
@@ -36,7 +36,7 @@
     <maven.compiler.release>17</maven.compiler.release>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <ehrbase.sdk.version>v1.26.0</ehrbase.sdk.version>
+    <ehrbase.sdk.version>v1.29.0</ehrbase.sdk.version>
     <commons.lang3.version>3.14.0</commons.lang3.version>
     <lombok.version>1.18.26</lombok.version>
   </properties>

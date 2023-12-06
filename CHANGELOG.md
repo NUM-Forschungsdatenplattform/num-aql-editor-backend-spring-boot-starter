@@ -9,6 +9,9 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.0]
     ### Added
-    ### Changed
-    
+    ### Changed    
 - change artefact id 
+## [1.0.1]
+    ### Added
+    ### Changed
+- upgrade openEHR SDK to version v1.29.0

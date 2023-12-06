@@ -58,17 +58,7 @@ public class AqlEditorAqlService {
   }
 
   public AqlDto parseAql(Result result) {
-    AqlDto aqlDto = new AqlToDtoParser().parse(result.getQ());
-    if (result.getQueryParameters() != null) {
-      List<ParameterValue> parameterValues = extractParameterValues(aqlDto.getWhere());
-      parameterValues.forEach(
-          p -> {
-            if (result.getQueryParameters().containsKey(p.getName())) {
-              p.setType(result.getQueryParameters().get(p.getName()));
-            }
-          });
-    }
-    return aqlDto;
+    return new AqlToDtoParser().parse(result.getQ());
   }
 
   public QueryValidationResponse validateAql(Result query) {

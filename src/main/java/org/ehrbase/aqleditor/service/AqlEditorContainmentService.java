@@ -25,21 +25,22 @@ import com.nedap.archie.rm.datavalues.quantity.DvInterval;
 import com.nedap.archie.rminfo.ArchieRMInfoLookup;
 import com.nedap.archie.rminfo.RMAttributeInfo;
 import com.nedap.archie.rminfo.RMTypeInfo;
+import lombok.AllArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
+import org.ehrbase.aqleditor.dto.containment.ContainmentDto;
+import org.ehrbase.aqleditor.dto.containment.FieldDto;
+import org.ehrbase.openehr.sdk.aql.webtemplatepath.AqlPath;
+import org.ehrbase.openehr.sdk.generator.config.RmClassGeneratorConfig;
+import org.ehrbase.openehr.sdk.util.SnakeCase;
+import org.ehrbase.openehr.sdk.util.reflection.ReflectionHelper;
+import org.ehrbase.openehr.sdk.webtemplate.model.WebTemplate;
+import org.ehrbase.openehr.sdk.webtemplate.model.WebTemplateNode;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Iterator;
 import java.util.Map;
-import lombok.AllArgsConstructor;
-import org.apache.commons.lang3.StringUtils;
-import org.ehrbase.aql.dto.path.AqlPath;
-import org.ehrbase.aqleditor.dto.containment.ContainmentDto;
-import org.ehrbase.aqleditor.dto.containment.FieldDto;
-import org.ehrbase.client.classgenerator.config.RmClassGeneratorConfig;
-import org.ehrbase.serialisation.util.SnakeCase;
-import org.ehrbase.util.reflection.ReflectionHelper;
-import org.ehrbase.webtemplate.model.WebTemplate;
-import org.ehrbase.webtemplate.model.WebTemplateNode;
-import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor

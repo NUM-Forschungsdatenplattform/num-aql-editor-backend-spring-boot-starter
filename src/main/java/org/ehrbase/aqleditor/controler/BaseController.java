@@ -22,7 +22,7 @@ package org.ehrbase.aqleditor.controler;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
-import org.ehrbase.aql.parser.AqlParseException;
+import org.ehrbase.openehr.sdk.aql.parser.AqlParseException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -21,10 +21,10 @@ package org.ehrbase.aqleditor.controler;
 
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
-import org.ehrbase.aql.dto.AqlDto;
 import org.ehrbase.aqleditor.dto.aql.QueryValidationResponse;
 import org.ehrbase.aqleditor.dto.aql.Result;
 import org.ehrbase.aqleditor.service.AqlEditorAqlService;
+import org.ehrbase.openehr.sdk.aql.dto.AqlQuery;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,12 +43,12 @@ public class AqlEditorAqlController extends BaseController {
   private AqlEditorAqlService aqlEditorAqlService;
 
   @PostMapping
-  public ResponseEntity<Result> buildAql(@RequestBody AqlDto aqlDto) {
+  public ResponseEntity<Result> buildAql(@RequestBody AqlQuery aqlDto) {
     return ResponseEntity.ok(aqlEditorAqlService.buildAql(aqlDto));
   }
 
   @GetMapping
-  public ResponseEntity<AqlDto> parseAql(@RequestBody Result result) {
+  public ResponseEntity<AqlQuery> parseAql(@RequestBody Result result) {
     return ResponseEntity.ok(aqlEditorAqlService.parseAql(result));
   }
 

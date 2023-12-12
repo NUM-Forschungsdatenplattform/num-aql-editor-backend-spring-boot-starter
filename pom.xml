@@ -36,9 +36,9 @@
     <maven.compiler.release>17</maven.compiler.release>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <ehrbase.sdk.version>2.0.0</ehrbase.sdk.version>
+    <ehrbase.sdk.version>2.1.0</ehrbase.sdk.version>
     <commons.lang3.version>3.14.0</commons.lang3.version>
-    <lombok.version>1.18.26</lombok.version>
+    <lombok.version>1.18.30</lombok.version>
   </properties>
 
   <!-- Spring Boot starter parent is taking over most parts of the dependency management -->

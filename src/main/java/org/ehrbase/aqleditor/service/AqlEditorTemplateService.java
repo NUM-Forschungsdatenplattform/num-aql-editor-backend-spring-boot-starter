@@ -18,16 +18,17 @@
  */
 package org.ehrbase.aqleditor.service;
 
-import java.util.List;
-import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import org.ehrbase.aqleditor.dto.template.TemplateDto;
-import org.ehrbase.client.openehrclient.defaultrestclient.DefaultRestClient;
-import org.ehrbase.response.openehr.TemplatesResponseData;
-import org.ehrbase.webtemplate.filter.Filter;
-import org.ehrbase.webtemplate.model.WebTemplate;
-import org.ehrbase.webtemplate.parser.OPTParser;
+import org.ehrbase.openehr.sdk.client.openehrclient.defaultrestclient.DefaultRestClient;
+import org.ehrbase.openehr.sdk.response.dto.TemplatesResponseData;
+import org.ehrbase.openehr.sdk.webtemplate.filter.Filter;
+import org.ehrbase.openehr.sdk.webtemplate.model.WebTemplate;
+import org.ehrbase.openehr.sdk.webtemplate.parser.OPTParser;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor

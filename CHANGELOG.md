@@ -15,7 +15,7 @@ All notable changes to this project will be documented in this file.
     ### Added
     ### Changed
 - upgrade openEHR SDK to version v1.29.0
-## [1.0.2-rc1]
+## [1.0.2]
     ### Added
     ### Changed
 - upgrade openEHR SDK to version 2.1.0

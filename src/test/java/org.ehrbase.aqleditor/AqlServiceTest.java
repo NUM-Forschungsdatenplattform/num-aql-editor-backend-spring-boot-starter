@@ -52,9 +52,9 @@ public class AqlServiceTest {
     assertThat(response.getStartColumn(), is("23"));
     assertThat(response.getStartLine(), is("1"));
     assertThat(response.getMessage(),
-            containsStringIgnoringCase("Parse exception: line 1: char 23 mismatched input 'where' expecting {NULL, STRING_FUNCTION_ID, NUMERIC_FUNCTION_ID, DATE_TIME_FUNCTION_ID, COUNT, MIN, MAX, SUM, AVG, TERMINOLOGY, BOOLEAN, IDENTIFIER, INTEGER, REAL, SCI_INTEGER, SCI_REAL, DATE, TIME, DATETIME, STRING, '-'}"));
+            containsStringIgnoringCase("Parse exception: line 1: char 23 mismatched input 'where' expecting {NULL, CONTAINS, STRING_FUNCTION_ID, NUMERIC_FUNCTION_ID, DATE_TIME_FUNCTION_ID, COUNT, MIN, MAX, SUM, AVG, TERMINOLOGY, BOOLEAN, IDENTIFIER, INTEGER, REAL, SCI_INTEGER, SCI_REAL, DATE, TIME, DATETIME, STRING, '-'}"));
     assertThat(response.getError(),
-            containsStringIgnoringCase("mismatched input 'where' expecting {NULL, STRING_FUNCTION_ID, NUMERIC_FUNCTION_ID, DATE_TIME_FUNCTION_ID, COUNT, MIN, MAX, SUM, AVG, TERMINOLOGY, BOOLEAN, IDENTIFIER, INTEGER, REAL, SCI_INTEGER, SCI_REAL, DATE, TIME, DATETIME, STRING, '-'}"));
+            containsStringIgnoringCase("mismatched input 'where' expecting {NULL, CONTAINS, STRING_FUNCTION_ID, NUMERIC_FUNCTION_ID, DATE_TIME_FUNCTION_ID, COUNT, MIN, MAX, SUM, AVG, TERMINOLOGY, BOOLEAN, IDENTIFIER, INTEGER, REAL, SCI_INTEGER, SCI_REAL, DATE, TIME, DATETIME, STRING, '-'}"));
   }
 
   @Test

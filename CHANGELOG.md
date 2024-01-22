@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 ##  [unreleased]
     ### Added
     ### Changed
-- upgrade openEHR SDK to version 2.5.0
+- upgrade openEHR SDK to version 2.6.0
     ### Fixed
 
 ## [1.0.0]

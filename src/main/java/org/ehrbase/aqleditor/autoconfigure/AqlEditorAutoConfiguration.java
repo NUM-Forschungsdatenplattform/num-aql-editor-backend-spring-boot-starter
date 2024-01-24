@@ -19,10 +19,11 @@
 
 package org.ehrbase.aqleditor.autoconfigure;
 
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@AutoConfiguration
 @ComponentScan("org.ehrbase.aqleditor")
 public class AqlEditorAutoConfiguration {
 

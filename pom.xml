@@ -22,7 +22,7 @@
 
   <groupId>org.ehrbase.openehr</groupId>
   <artifactId>num-aql-editor-backend-spring-boot-starter</artifactId>
-  <version>1.0.4-rc1</version>
+  <version>1.0.4-rc2</version>
   <packaging>jar</packaging>
 
   <repositories>

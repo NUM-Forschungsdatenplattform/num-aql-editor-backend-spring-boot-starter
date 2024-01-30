@@ -1,10 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-##  [1.0.3-rc2]
+##  [1.0.4]
     ### Added
     ### Changed
-- upgrade openEHR SDK to version 2.6.0
-    ### Fixed
+- upgrade spring boot to version 3.1.8
 
 ## [1.0.0]
     ### Added

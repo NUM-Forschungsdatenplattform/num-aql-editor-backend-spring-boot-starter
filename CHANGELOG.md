@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 ##  [unreleased]
     ### Added
     ### Changed
-- upgrade openEHR SDK to version 2.6.0
+- upgrade spring boot to version 3.1.8
     ### Fixed
 
 ## [1.0.0]

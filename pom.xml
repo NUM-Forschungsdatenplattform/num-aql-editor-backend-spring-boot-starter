@@ -22,7 +22,7 @@
 
   <groupId>org.ehrbase.openehr</groupId>
   <artifactId>num-aql-editor-backend-spring-boot-starter</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
 
   <repositories>
@@ -45,7 +45,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.1.8</version>
+    <version>3.2.2</version>
     <relativePath/>
     <!-- lookup parent from repository -->
   </parent>

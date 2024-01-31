@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+##  [1.0.5]
+    ### Added
+    ### Changed
+- upgrade spring boot to version 3.2.2
 ##  [1.0.4]
     ### Added
     ### Changed

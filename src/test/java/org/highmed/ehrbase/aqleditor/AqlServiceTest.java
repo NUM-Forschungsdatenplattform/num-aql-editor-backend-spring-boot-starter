@@ -1,4 +1,4 @@
-package org.ehrbase.aqleditor;
+package org.highmed.ehrbase.aqleditor;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsStringIgnoringCase;
@@ -7,9 +7,9 @@ import static org.hamcrest.core.IsNull.notNullValue;
 import static org.hamcrest.core.IsNull.nullValue;
 
 import org.apache.commons.lang3.StringUtils;
-import org.ehrbase.aqleditor.dto.aql.QueryValidationResponse;
-import org.ehrbase.aqleditor.dto.aql.Result;
-import org.ehrbase.aqleditor.service.AqlEditorAqlService;
+import org.highmed.ehrbase.aqleditor.dto.aql.QueryValidationResponse;
+import org.highmed.ehrbase.aqleditor.dto.aql.Result;
+import org.highmed.ehrbase.aqleditor.service.AqlEditorAqlService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

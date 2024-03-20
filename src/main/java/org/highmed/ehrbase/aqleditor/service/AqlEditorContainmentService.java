@@ -17,7 +17,7 @@
  *
  */
 
-package org.ehrbase.aqleditor.service;
+package org.highmed.ehrbase.aqleditor.service;
 
 import com.nedap.archie.rm.archetyped.Locatable;
 import com.nedap.archie.rm.composition.EventContext;
@@ -27,8 +27,8 @@ import com.nedap.archie.rminfo.RMAttributeInfo;
 import com.nedap.archie.rminfo.RMTypeInfo;
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
-import org.ehrbase.aqleditor.dto.containment.ContainmentDto;
-import org.ehrbase.aqleditor.dto.containment.FieldDto;
+import org.highmed.ehrbase.aqleditor.dto.containment.ContainmentDto;
+import org.highmed.ehrbase.aqleditor.dto.containment.FieldDto;
 import org.ehrbase.openehr.sdk.aql.webtemplatepath.AqlPath;
 import org.ehrbase.openehr.sdk.generator.config.RmClassGeneratorConfig;
 import org.ehrbase.openehr.sdk.util.SnakeCase;

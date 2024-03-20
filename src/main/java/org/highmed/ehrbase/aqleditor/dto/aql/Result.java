@@ -17,15 +17,21 @@
  *
  */
 
-package org.ehrbase.aqleditor.dto.containment;
+package org.highmed.ehrbase.aqleditor.dto.aql;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Map;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
+@Builder
 @Data
-public class FieldDto {
+@AllArgsConstructor
+public class Result {
 
-  private String name;
-  private String rmType;
-  private String aqlPath;
-  private String humanReadablePath;
+  private String q;
+
+  @JsonProperty("query_parameters")
+  private Map<String, String> queryParameters;
 }

@@ -17,30 +17,29 @@
  *
  */
 
-package org.ehrbase.aqleditor.controler;
+package org.highmed.ehrbase.aqleditor.controler;
 
+import java.util.List;
 import lombok.AllArgsConstructor;
-import org.ehrbase.aqleditor.dto.containment.ContainmentDto;
-import org.ehrbase.aqleditor.service.AqlEditorContainmentService;
+import org.highmed.ehrbase.aqleditor.dto.template.TemplateDto;
+import org.highmed.ehrbase.aqleditor.service.AqlEditorTemplateService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(
-    path = "/aqleditor/v1/containment",
+    path = "/aqleditor/v1/template",
     produces = {MediaType.APPLICATION_JSON_VALUE})
 @AllArgsConstructor
-public class AqlEditorContainmentController extends BaseController {
+public class AqlEditorTemplateController extends BaseController {
 
-  private final AqlEditorContainmentService aqlEditorContainmentService;
+  private final AqlEditorTemplateService aqlEditorTemplateService;
 
-  @GetMapping(path = "{templateId}")
-  public ResponseEntity<ContainmentDto> getByTEmplateId(
-      @PathVariable(value = "templateId") String templateId) {
-    return ResponseEntity.ok(aqlEditorContainmentService.buildContainment(templateId));
+  @GetMapping
+  public ResponseEntity<List<TemplateDto>> getAll() {
+    return ResponseEntity.ok(aqlEditorTemplateService.getAll());
   }
 }

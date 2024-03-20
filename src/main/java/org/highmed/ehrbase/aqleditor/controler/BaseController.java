@@ -17,7 +17,7 @@
  *
  */
 
-package org.ehrbase.aqleditor.controler;
+package org.highmed.ehrbase.aqleditor.controler;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package org.ehrbase.aqleditor.dto.aql;
+package org.highmed.ehrbase.aqleditor.dto.aql;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

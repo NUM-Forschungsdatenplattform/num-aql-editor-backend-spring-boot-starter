@@ -17,7 +17,7 @@
  *
  */
 
-package org.ehrbase.aqleditor.autoconfigure;
+package org.highmed.ehrbase.aqleditor.autoconfigure;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

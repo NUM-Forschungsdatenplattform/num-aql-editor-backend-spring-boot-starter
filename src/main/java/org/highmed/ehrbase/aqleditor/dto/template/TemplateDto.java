@@ -17,16 +17,19 @@
  *
  */
 
-package org.ehrbase.aqleditor.dto.containment;
+package org.highmed.ehrbase.aqleditor.dto.template;
 
-import java.util.ArrayList;
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Data
-public class ContainmentDto {
+public class TemplateDto {
 
-  private final List<ContainmentDto> children = new ArrayList<>();
-  private final List<FieldDto> fields = new ArrayList<>();
-  private String archetypeId;
+  private String templateId;
+  private String description;
 }

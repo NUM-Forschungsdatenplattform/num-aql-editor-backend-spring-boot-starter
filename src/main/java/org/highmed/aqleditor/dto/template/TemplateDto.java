@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2021  Alex Karle (Vitasystems GmbH) and Hannover Medical School
+ * Copyright (c) 2020  Stefan Spiska (Vitasystems GmbH) and Hannover Medical School
  * This file is part of Project EHRbase
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,13 +17,19 @@
  *
  */
 
-package org.highmed.ehrbase.aqleditor.autoconfigure;
+package org.highmed.aqleditor.dto.template;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Configuration
-@ComponentScan("org.ehrbase.aqleditor")
-public class AqlEditorAutoConfiguration {
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
+public class TemplateDto {
 
+  private String templateId;
+  private String description;
 }

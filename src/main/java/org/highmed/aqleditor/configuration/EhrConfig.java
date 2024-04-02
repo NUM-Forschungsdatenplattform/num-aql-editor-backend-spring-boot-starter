@@ -1,4 +1,4 @@
-package org.highmed.ehrbase.aqleditor.configuration;
+package org.highmed.aqleditor.configuration;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -9,7 +9,7 @@ import org.apache.http.client.CredentialsProvider;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.highmed.ehrbase.aqleditor.properties.EhrProperties;
+import org.highmed.aqleditor.properties.EhrProperties;
 import org.ehrbase.openehr.sdk.client.openehrclient.OpenEhrClientConfig;
 import org.ehrbase.openehr.sdk.client.openehrclient.defaultrestclient.DefaultRestClient;
 import org.springframework.context.annotation.Bean;

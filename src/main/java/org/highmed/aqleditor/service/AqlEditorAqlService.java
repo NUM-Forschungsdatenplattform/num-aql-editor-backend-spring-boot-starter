@@ -17,12 +17,12 @@
  *
  */
 
-package org.highmed.ehrbase.aqleditor.service;
+package org.highmed.aqleditor.service;
 
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
-import org.highmed.ehrbase.aqleditor.dto.aql.QueryValidationResponse;
-import org.highmed.ehrbase.aqleditor.dto.aql.Result;
+import org.highmed.aqleditor.dto.aql.QueryValidationResponse;
+import org.highmed.aqleditor.dto.aql.Result;
 import org.ehrbase.openehr.sdk.aql.dto.AqlQuery;
 import org.ehrbase.openehr.sdk.aql.parser.AqlParseException;
 import org.ehrbase.openehr.sdk.aql.parser.AqlQueryParser;

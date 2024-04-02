@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2020  Stefan Spiska (Vitasystems GmbH) and Hannover Medical School
+ * Copyright (c) 2021  Alex Karle (Vitasystems GmbH) and Hannover Medical School
  * This file is part of Project EHRbase
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,21 +17,13 @@
  *
  */
 
-package org.highmed.ehrbase.aqleditor.dto.aql;
+package org.highmed.aqleditor.autoconfigure;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import java.util.Map;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@Builder
-@Data
-@AllArgsConstructor
-public class Result {
+@Configuration
+@ComponentScan("org.ehrbase.aqleditor")
+public class AqlEditorAutoConfiguration {
 
-  private String q;
-
-  @JsonProperty("query_parameters")
-  private Map<String, String> queryParameters;
 }

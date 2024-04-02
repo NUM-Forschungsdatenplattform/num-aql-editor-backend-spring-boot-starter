@@ -17,7 +17,7 @@
  *
  */
 
-package org.highmed.ehrbase.aqleditor.dto.containment;
+package org.highmed.aqleditor.dto.containment;
 
 import lombok.Data;
 

@@ -17,11 +17,11 @@
  *
  */
 
-package org.highmed.ehrbase.aqleditor.controler;
+package org.highmed.aqleditor.controler;
 
 import lombok.AllArgsConstructor;
-import org.highmed.ehrbase.aqleditor.dto.containment.ContainmentDto;
-import org.highmed.ehrbase.aqleditor.service.AqlEditorContainmentService;
+import org.highmed.aqleditor.dto.containment.ContainmentDto;
+import org.highmed.aqleditor.service.AqlEditorContainmentService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

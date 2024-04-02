@@ -17,13 +17,13 @@
  *
  */
 
-package org.highmed.ehrbase.aqleditor.controler;
+package org.highmed.aqleditor.controler;
 
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
-import org.highmed.ehrbase.aqleditor.dto.aql.QueryValidationResponse;
-import org.highmed.ehrbase.aqleditor.dto.aql.Result;
-import org.highmed.ehrbase.aqleditor.service.AqlEditorAqlService;
+import org.highmed.aqleditor.dto.aql.QueryValidationResponse;
+import org.highmed.aqleditor.dto.aql.Result;
+import org.highmed.aqleditor.service.AqlEditorAqlService;
 import org.ehrbase.openehr.sdk.aql.dto.AqlQuery;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

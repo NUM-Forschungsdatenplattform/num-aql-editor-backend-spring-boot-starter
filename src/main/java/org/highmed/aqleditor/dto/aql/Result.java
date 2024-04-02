@@ -17,16 +17,21 @@
  *
  */
 
-package org.highmed.ehrbase.aqleditor.dto.containment;
+package org.highmed.aqleditor.dto.aql;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Map;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
+@Builder
 @Data
-public class ContainmentDto {
+@AllArgsConstructor
+public class Result {
 
-  private final List<ContainmentDto> children = new ArrayList<>();
-  private final List<FieldDto> fields = new ArrayList<>();
-  private String archetypeId;
+  private String q;
+
+  @JsonProperty("query_parameters")
+  private Map<String, String> queryParameters;
 }

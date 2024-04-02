@@ -17,12 +17,12 @@
  *
  */
 
-package org.highmed.ehrbase.aqleditor.controler;
+package org.highmed.aqleditor.controler;
 
 import java.util.List;
 import lombok.AllArgsConstructor;
-import org.highmed.ehrbase.aqleditor.dto.template.TemplateDto;
-import org.highmed.ehrbase.aqleditor.service.AqlEditorTemplateService;
+import org.highmed.aqleditor.dto.template.TemplateDto;
+import org.highmed.aqleditor.service.AqlEditorTemplateService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -16,10 +16,10 @@
  * limitations under the License.
  *
  */
-package org.highmed.ehrbase.aqleditor.service;
+package org.highmed.aqleditor.service;
 
 import lombok.AllArgsConstructor;
-import org.highmed.ehrbase.aqleditor.dto.template.TemplateDto;
+import org.highmed.aqleditor.dto.template.TemplateDto;
 import org.ehrbase.openehr.sdk.client.openehrclient.defaultrestclient.DefaultRestClient;
 import org.ehrbase.openehr.sdk.response.dto.TemplatesResponseData;
 import org.ehrbase.openehr.sdk.webtemplate.filter.Filter;

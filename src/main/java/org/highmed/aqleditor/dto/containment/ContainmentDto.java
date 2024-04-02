@@ -17,7 +17,7 @@
  *
  */
 
-package org.ehrbase.aqleditor.dto.containment;
+package org.highmed.aqleditor.dto.containment;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -17,7 +17,7 @@
  *
  */
 
-package org.ehrbase.aqleditor.dto.aql;
+package org.highmed.aqleditor.dto.aql;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Map;

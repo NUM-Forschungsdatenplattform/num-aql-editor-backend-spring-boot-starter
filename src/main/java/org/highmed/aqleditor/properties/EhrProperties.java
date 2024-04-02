@@ -1,4 +1,4 @@
-package org.ehrbase.aqleditor.properties;
+package org.highmed.aqleditor.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
